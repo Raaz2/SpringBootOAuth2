@@ -48,6 +48,11 @@ public class UserController {
         return "User saved!";
     }
 
+    @GetMapping("/live")
+    public String liveTest() {
+        return "Live...";
+    }
+
     @GetMapping("/users")
     public List<User> getAllUsers() throws SQLException {
 
