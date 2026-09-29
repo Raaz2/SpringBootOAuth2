@@ -47,5 +47,5 @@ jobs:
               docker pull ${{secrets.DOCKER_USERNAME}}/${{env.IMAGE_NAME}}:latest
               docker stop spring-boot-app || true
                           docker rm spring-boot-app || true
-                          docker run -d --name spring-boot-app --restart unless-stopped -p 8081:8081 ${{ secrets.DOCKER_USERNAME }}/${{ env.IMAGE_NAME }}:latest
+                          docker run -d --name spring-boot-app --restart unless-stopped -p 8080:8080 ${{ secrets.DOCKER_USERNAME }}/${{ env.IMAGE_NAME }}:latest
                           docker image prune -f
